@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* FAST MOVING GRADIENT BACKGROUND */
+.animate-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg,
+            #ff007b,
+            #7a00ff,
+            #0066ff,
+            #ff00cc,
+            #ff6600);
+    background-size: 300% 300%;
+    animation: gradientFast 8s linear infinite;
+}
+
+@keyframes gradientFast {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* FAST FLOATING ORBS */
+.float-fast {
+    animation: floatFast 3.5s ease-in-out infinite;
+}
+
+@keyframes floatFast {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(15px, -25px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* QUICK PULSE GLOW */
+.pulse-fast {
+    animation: pulseFast 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseFast {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+/* QUICK TEXT POP */
+.pop-in {
+    animation: popIn 0.6s ease-out forwards;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* STAGGER DELAY HELPERS */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+/* BUTTON ENERGY EFFECT */
+.glow-btn {
+    box-shadow: 0 0 25px rgba(255, 0, 123, 0.5);
+    transition: all 0.2s ease;
+}
+
+.glow-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 45px rgba(255, 0, 123, 0.8);
+}
+
+/* QUICK BOUNCE ICON */
+.bounce-fast {
+    animation: bounceFast 1.2s infinite;
+}
+
+@keyframes bounceFast {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
